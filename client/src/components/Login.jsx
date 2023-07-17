@@ -1,6 +1,17 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import React from "react";
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBCard,
+  MDBCardBody,
+  MDBInput,
+  MDBIcon,
+} from "mdb-react-ui-kit";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -35,53 +46,80 @@ function Login() {
       alert(err);
     }
   }
-
   return (
-    <div>
-      <div class="container">
-        <div class="row">
-          <h2>Login</h2>
-          <hr />
-        </div>
+    <MDBContainer
+      fluid
+      className="p-4 background-radial-gradient overflow-hidden"
+    >
+      <MDBRow>
+        <MDBCol
+          md="6"
+          className="text-center text-md-start d-flex flex-column justify-content-center"
+        >
+          <h1
+            className="my-5 display-3 fw-bold ls-tight px-3"
+            style={{ color: "hsl(218, 81%, 95%)" }}
+          >
+            Elevating Events <br />
+            <span style={{ color: "hsl(218, 81%, 75%)" }}>
+              to Extraordinary Experiences
+            </span>
+          </h1>
 
-        <div class="row">
-          <div class="col-sm-6">
-            <form>
-              <div class="form-group">
-                <label>Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="Enter Name"
-                  value={email}
-                  onChange={(event) => {
-                    setEmail(event.target.value);
-                  }}
-                />
-              </div>
+          <p className="px-3" style={{ color: "hsl(218, 81%, 85%)" }}>
+            At our event management company, we specialize in transforming
+            ordinary events into extraordinary experiences. With meticulous
+            planning, innovative ideas, and attention to detail, we curate
+            memorable and immersive events that leave a lasting impression. From
+            corporate conferences and galas to weddings and social gatherings,
+            our team of experts is dedicated to exceeding expectations and
+            creating moments that are truly unforgettable. Trust us to handle
+            every aspect of your event, from conceptualization to execution, and
+            let us elevate your event to new heights.
+          </p>
+        </MDBCol>
 
-              <div class="form-group">
-                <label>password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  placeholder="Enter Fee"
-                  value={password}
-                  onChange={(event) => {
-                    setPassword(event.target.value);
-                  }}
-                />
-              </div>
-              <button type="submit" class="btn btn-primary" onClick={login}>
-                Login
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+        <MDBCol md="6" className="position-relative">
+          <div
+            id="radius-shape-1"
+            className="position-absolute rounded-circle shadow-5-strong"
+          ></div>
+          <div
+            id="radius-shape-2"
+            className="position-absolute shadow-5-strong"
+          ></div>
+
+          <MDBCard className="my-5 bg-glass">
+            <MDBCardBody className="p-5">
+              <MDBInput
+                wrapperClass="mb-4"
+                label="Email"
+                id="form3"
+                type="email"
+                value={email}
+                onChange={(event) => {
+                  setEmail(event.target.value);
+                }}
+              />
+              <MDBInput
+                wrapperClass="mb-4"
+                label="Password"
+                id="form4"
+                type="password"
+                value={password}
+                onChange={(event) => {
+                  setPassword(event.target.value);
+                }}
+              />
+
+              <MDBBtn className="w-100 mb-4" size="md" onClick={login}>
+                Login <MDBIcon fas icon="sign-in-alt" className="ms-1" />
+              </MDBBtn>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBCol>
+      </MDBRow>
+    </MDBContainer>
   );
 }
 

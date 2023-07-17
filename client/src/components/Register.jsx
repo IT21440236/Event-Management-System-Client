@@ -1,5 +1,17 @@
 import { useState } from "react";
 import axios from "axios";
+import React from "react";
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBCard,
+  MDBCardBody,
+  MDBInput,
+  MDBCheckbox,
+  MDBIcon,
+} from "mdb-react-ui-kit";
 
 function Register() {
   const [userName, setuserName] = useState("");
@@ -19,67 +31,144 @@ function Register() {
       alert(err);
     }
   }
-
   return (
-    <div>
-      <div className="container mt-4">
-        <div className="card">
-          <h1>User Registation</h1>
+    <MDBContainer
+      fluid
+      className="p-4 background-radial-gradient overflow-hidden"
+    >
+      <MDBRow>
+        <MDBCol
+          md="6"
+          className="text-center text-md-start d-flex flex-column justify-content-center"
+        >
+          <h1
+            className="my-5 display-3 fw-bold ls-tight px-3"
+            style={{ color: "hsl(218, 81%, 95%)" }}
+          >
+            Elevating Events <br />
+            <span style={{ color: "hsl(218, 81%, 75%)" }}>
+              to Extraordinary Experiences
+            </span>
+          </h1>
 
-          <form>
-            <div className="form-group">
-              <label>User name</label>
-              <input
-                type="text"
-                className="form-control"
-                id="userName"
-                placeholder="Enter Name"
-                value={userName}
-                onChange={(event) => {
-                  setuserName(event.target.value);
-                }}
-              />
-            </div>
+          <p className="px-3" style={{ color: "hsl(218, 81%, 85%)" }}>
+            At our event management company, we specialize in transforming
+            ordinary events into extraordinary experiences. With meticulous
+            planning, innovative ideas, and attention to detail, we curate
+            memorable and immersive events that leave a lasting impression. From
+            corporate conferences and galas to weddings and social gatherings,
+            our team of experts is dedicated to exceeding expectations and
+            creating moments that are truly unforgettable. Trust us to handle
+            every aspect of your event, from conceptualization to execution, and
+            let us elevate your event to new heights.
+          </p>
+        </MDBCol>
 
-            <div className="form-group">
-              <label>email</label>
-              <input
+        <MDBCol md="6" className="position-relative">
+          <div
+            id="radius-shape-1"
+            className="position-absolute rounded-circle shadow-5-strong"
+          ></div>
+          <div
+            id="radius-shape-2"
+            className="position-absolute shadow-5-strong"
+          ></div>
+
+          <MDBCard className="my-5 bg-glass">
+            <MDBCardBody className="p-5">
+              <MDBRow>
+                <MDBCol col="6">
+                  <MDBInput
+                    wrapperClass="mb-4"
+                    label="User name"
+                    id="form1"
+                    type="text"
+                    value={userName}
+                    onChange={(event) => {
+                      setuserName(event.target.value);
+                    }}
+                  />
+                </MDBCol>
+              </MDBRow>
+
+              <MDBInput
+                wrapperClass="mb-4"
+                label="Email"
+                id="form3"
                 type="email"
-                className="form-control"
-                id="email"
-                placeholder="Enter Email"
                 value={email}
                 onChange={(event) => {
                   setEmail(event.target.value);
                 }}
               />
-            </div>
-
-            <div className="form-group">
-              <label>password</label>
-              <input
+              <MDBInput
+                wrapperClass="mb-4"
+                label="Password"
+                id="form4"
                 type="password"
-                className="form-control"
-                id="password"
-                placeholder="Enter password"
                 value={password}
                 onChange={(event) => {
                   setPassword(event.target.value);
                 }}
               />
-            </div>
 
-            <button
-              type="submit"
-              className="btn btn-primary mt-4"
-              onClick={save}
-            >
-              Save
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
+              <div className="d-flex justify-content-center mb-4">
+                <MDBCheckbox
+                  name="flexCheck"
+                  value=""
+                  id="flexCheckDefault"
+                  label="Subscribe to our newsletter"
+                />
+              </div>
+
+              <MDBBtn className="w-100 mb-4" size="md" onClick={save}>
+                sign up
+              </MDBBtn>
+
+              <div className="text-center">
+                <p>or sign up with:</p>
+
+                <MDBBtn
+                  tag="a"
+                  color="none"
+                  className="mx-3"
+                  style={{ color: "#1266f1" }}
+                >
+                  <MDBIcon fab icon="facebook-f" size="sm" />
+                </MDBBtn>
+
+                <MDBBtn
+                  tag="a"
+                  color="none"
+                  className="mx-3"
+                  style={{ color: "#1266f1" }}
+                >
+                  <MDBIcon fab icon="twitter" size="sm" />
+                </MDBBtn>
+
+                <MDBBtn
+                  tag="a"
+                  color="none"
+                  className="mx-3"
+                  style={{ color: "#1266f1" }}
+                >
+                  <MDBIcon fab icon="google" size="sm" />
+                </MDBBtn>
+
+                <MDBBtn
+                  tag="a"
+                  color="none"
+                  className="mx-3"
+                  style={{ color: "#1266f1" }}
+                >
+                  <MDBIcon fab icon="github" size="sm" />
+                </MDBBtn>
+              </div>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBCol>
+      </MDBRow>
+    </MDBContainer>
   );
 }
 
