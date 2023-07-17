@@ -46,22 +46,12 @@ function Register() {
             style={{ color: "hsl(218, 81%, 95%)" }}
           >
             Elevating Events <br />
-            <span style={{ color: "hsl(218, 81%, 75%)" }}>
-              to Extraordinary Experiences
-            </span>
+            <span style={{ color: "red" }}>to Extraordinary Experiences</span>
           </h1>
 
-          <p className="px-3" style={{ color: "hsl(218, 81%, 85%)" }}>
-            At our event management company, we specialize in transforming
-            ordinary events into extraordinary experiences. With meticulous
-            planning, innovative ideas, and attention to detail, we curate
-            memorable and immersive events that leave a lasting impression. From
-            corporate conferences and galas to weddings and social gatherings,
-            our team of experts is dedicated to exceeding expectations and
-            creating moments that are truly unforgettable. Trust us to handle
-            every aspect of your event, from conceptualization to execution, and
-            let us elevate your event to new heights.
-          </p>
+          {/* <p className="px-3" style={{ color: "white" }}>
+            Crafting Extraordinary Events, Tailored to Perfection
+          </p> */}
         </MDBCol>
 
         <MDBCol md="6" className="position-relative">
