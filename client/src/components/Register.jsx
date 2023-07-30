@@ -123,7 +123,7 @@ function Register() {
               <MDBBtn className="w-100 mb-4" size="md" onClick={save}>
                 sign up
               </MDBBtn>
-              <p style={{alignItems: "center", marginLeft:"65px"}}>Have an account <a href="/login">Sign-in</a></p>
+              <p style={{alignItems: "center", marginLeft:"65px"}}>Have an account <a href="/">Sign-in</a></p>
 
               <div className="text-center">
                 <p>or sign up with:</p>

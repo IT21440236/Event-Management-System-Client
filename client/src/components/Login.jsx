@@ -117,7 +117,7 @@ function Login() {
                 Login <MDBIcon fas icon="sign-in-alt" className="ms-1" />
               </MDBBtn>
               <div className="d-flex justify-content-center mb-4">
-              <a href="/" style={{color: "black", textAlign: "center", marginTop: "15px", textDecoration: "underline", }}>Don't have an account? Register here</a>
+              <a href="/register" style={{color: "black", textAlign: "center", marginTop: "15px", textDecoration: "underline", }}>Don't have an account? Register here</a>
               </div>
             </MDBCardBody>
           </MDBCard>
