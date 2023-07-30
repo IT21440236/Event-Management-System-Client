@@ -48,8 +48,16 @@ function Login() {
   }
   return (
     <MDBContainer
-      fluid
-      className="p-4 background-radial-gradient overflow-hidden "
+    fluid
+    className="p-4"
+    style={{
+      background: "radial-gradient(ellipse at center, rgba(30, 30, 30, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%)",
+      overflow: "hidden",
+      height: "100vh",
+      display: "flex",       
+      alignItems: "center",  
+      justifyContent: "center",
+    }}
     >
       <MDBRow>
         <MDBCol
@@ -58,10 +66,10 @@ function Login() {
         >
           <h1
             className="my-5 display-3 fw-bold ls-tight px-3"
-            style={{ color: "hsl(218, 81%, 95%)" }}
+            style={{ color: "hsl(218, 81%, 95%)", fontFamily: "Roboto, sans-serif" }}
           >
-            Elevating Events <br />
-            <span style={{ color: "red" }}>to Extraordinary Experiences</span>
+            InfiniteImagination Events <br />
+            <p style={{ color: "gold", fontSize: "30px"}}>elevating events to extraordinary experiences</p>
           </h1>
 
           {/* <p className="px-3" style={{ color: "white" }}>
@@ -79,8 +87,11 @@ function Login() {
             className="position-absolute shadow-5-strong"
           ></div>
 
-          <MDBCard className="my-5 bg-glass">
-            <MDBCardBody className="p-5">
+          <MDBCard className="my-5 bg-glass" style={{ borderRadius: "35px", color: "black", width: "400px",minHeight: "450px", }}
+            >
+              <h1 style={{ color: "grey", fontFamily: "Roboto, sans-serif", textAlign: "center", marginTop: "25px" }}> Login </h1>
+            <MDBCardBody className="p-5" style={{ marginTop: "10px"}}>
+
               <MDBInput
                 wrapperClass="mb-4"
                 label="Email"
@@ -105,6 +116,9 @@ function Login() {
               <MDBBtn className="w-100 mb-4" size="md" onClick={login}>
                 Login <MDBIcon fas icon="sign-in-alt" className="ms-1" />
               </MDBBtn>
+              <div className="d-flex justify-content-center mb-4">
+              <a href="/" style={{color: "black", textAlign: "center", marginTop: "15px", textDecoration: "underline", }}>Don't have an account? Register here</a>
+              </div>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
@@ -113,4 +127,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Login;  

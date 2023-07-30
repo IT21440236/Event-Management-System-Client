@@ -34,7 +34,15 @@ function Register() {
   return (
     <MDBContainer
       fluid
-      className="p-4 background-radial-gradient overflow-hidden"
+      className="p-4"
+      style={{
+        background: "radial-gradient(ellipse at center, rgba(30, 30, 30, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%)",
+        overflow: "hidden",
+        height: "100vh",
+        display: "flex",       
+        alignItems: "center",  
+        justifyContent: "center",
+      }}
     >
       <MDBRow>
         <MDBCol
@@ -45,8 +53,8 @@ function Register() {
             className="my-5 display-3 fw-bold ls-tight px-3"
             style={{ color: "hsl(218, 81%, 95%)" }}
           >
-            Elevating Events <br />
-            <span style={{ color: "red" }}>to Extraordinary Experiences</span>
+            InfiniteImagination Events <br />
+            <p style={{ color: "gold", fontSize: "30px"}}>elevating events to extraordinary experiences</p>
           </h1>
 
           {/* <p className="px-3" style={{ color: "white" }}>
@@ -64,7 +72,8 @@ function Register() {
             className="position-absolute shadow-5-strong"
           ></div>
 
-          <MDBCard className="my-5 bg-glass">
+          <MDBCard className="my-5 bg-glass" style={{ borderRadius: "35px", color: "black", width: "400px",minHeight: "450px", }}>
+          <h1 style={{ color: "grey", fontFamily: "Roboto, sans-serif", textAlign: "center", marginTop: "25px" }}> Register </h1> 
             <MDBCardBody className="p-5">
               <MDBRow>
                 <MDBCol col="6">
@@ -114,6 +123,7 @@ function Register() {
               <MDBBtn className="w-100 mb-4" size="md" onClick={save}>
                 sign up
               </MDBBtn>
+              <p style={{alignItems: "center", marginLeft:"65px"}}>Have an account <a href="/login">Sign-in</a></p>
 
               <div className="text-center">
                 <p>or sign up with:</p>
