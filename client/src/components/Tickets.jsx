@@ -67,6 +67,11 @@ const Ticket = () => {
         console.log("New Ticket Added");
         // Refresh the list of tickets after adding a new one
         // fetchTickets();
+        setTicketName("");
+        setTicketPrice("");
+        setTicketDate("");
+        setTicketVenue("");
+        setTicketTime("");
       })
       .catch((error) => console.error("Error adding ticket:", error));
   };
