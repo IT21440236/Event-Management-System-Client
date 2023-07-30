@@ -143,8 +143,8 @@ const Ticket = () => {
           </Button>
         </Box>
       </Paper>
-      <h1>Tickets</h1>
-      <Paper elevation={3} style={paperStyle}>
+      {/* <h1>Tickets</h1> */}
+      {/* <Paper elevation={3} style={paperStyle}>
         {tickets.map((ticket) => (
           <Paper
             elevation={6}
@@ -164,7 +164,7 @@ const Ticket = () => {
             Time: {ticket.ticketTime}
           </Paper>
         ))}
-      </Paper>
+      </Paper> */}
     </Container>
   );
 };
