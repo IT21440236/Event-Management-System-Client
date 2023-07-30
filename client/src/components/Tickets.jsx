@@ -66,23 +66,23 @@ const Ticket = () => {
       .then(() => {
         console.log("New Ticket Added");
         // Refresh the list of tickets after adding a new one
-        fetchTickets();
+        // fetchTickets();
       })
       .catch((error) => console.error("Error adding ticket:", error));
   };
 
-  const fetchTickets = () => {
-    fetch("http://localhost:8080/api/v1/ticket/getTickets")
-      .then((res) => res.json())
-      .then((data) => {
-        setTickets(data);
-      })
-      .catch((error) => console.error("Error fetching tickets:", error));
-  };
+  // const fetchTickets = () => {
+  //   fetch("http://localhost:8080/api/v1/ticket/getTickets")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setTickets(data);
+  //     })
+  //     .catch((error) => console.error("Error fetching tickets:", error));
+  // };
 
-  useEffect(() => {
-    fetchTickets();
-  }, []);
+  // useEffect(() => {
+  //   fetchTickets();
+  // }, []);
 
   return (
     <Container>
